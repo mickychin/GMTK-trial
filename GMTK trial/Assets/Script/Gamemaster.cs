@@ -25,10 +25,10 @@ public class Gamemaster : MonoBehaviour
 
     public void TimeSet(int timeseted)
     {
-        NextWaveButton.gameObject.SetActive(false);
         Debug.Log("ELLO");
         Time = timeseted;
         StartCoroutine(UpdateTime());
+        NextWaveButton.gameObject.SetActive(false);
     }
 
     IEnumerator UpdateTime()
@@ -36,11 +36,10 @@ public class Gamemaster : MonoBehaviour
         yield return new WaitForSeconds(1f);
         if(Time > 0)
         {
+            DayMap.SetActive(false);
             Time -= 1;
             TimeText.text = "Time : " + Time.ToString();
-            StartCoroutine(UpdateTime());
-            DayMap.SetActive(false);
-        }
+            StartCoroutine(UpdateTime());        }
         else
         {
             //day time
