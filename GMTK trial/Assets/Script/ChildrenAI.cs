@@ -24,10 +24,14 @@ public class ChildrenAI : MonoBehaviour
     [Header("Death")]
     public GameObject deathObjectPrefab;
 
+    [Header("Animation")]
+    public Animator animator;
+
     void Start()
     {
         direction = GetRandomDirection();
         originalLayer = gameObject.layer;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -80,7 +84,7 @@ public class ChildrenAI : MonoBehaviour
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0;
         offset = transform.position - mousePosition;   
-
+        animator.IsPickedUpByThePlayer = false;
         previousMousePosition = Input.mousePosition;
     }
 
