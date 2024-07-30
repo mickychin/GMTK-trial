@@ -34,6 +34,12 @@ public class ChildrenAI : MonoBehaviour
     {
         if (!IsMoving)
         {
+            direction = (Vector3.zero - transform.position).normalized;
+            transform.Translate(direction * speed * Time.deltaTime);
+            if (Vector3.Distance(transform.position, Vector3.zero) < 0.1f)
+            {
+                Destroy(gameObject);
+            }
             return;
         }
 

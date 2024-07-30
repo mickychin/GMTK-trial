@@ -37,6 +37,7 @@ public class Gamemaster : MonoBehaviour
         }
         else
         {
+            //day time
             ChildrenAI[] childrens = FindObjectsOfType<ChildrenAI>();
             foreach (ChildrenAI children in childrens)
             {
