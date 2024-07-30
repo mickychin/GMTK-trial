@@ -12,7 +12,7 @@ public class ChildrenAI : MonoBehaviour
     public LayerMask collisionLayer;
     public float checkRadius = 0.5f;
     private Vector3 castStartPosition;
-    private int originalLayer;
+    public int originalLayer;
 
     void Start()
     {
