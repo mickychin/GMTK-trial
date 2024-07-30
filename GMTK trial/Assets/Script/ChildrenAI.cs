@@ -6,6 +6,7 @@ public class ChildrenAI : MonoBehaviour
 {
     [Header("Stats")]
     public float speed = 1f;
+    public bool IsMoving;
     private Vector3 direction;
 
     [Header("Collision")]
