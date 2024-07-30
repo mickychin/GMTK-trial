@@ -7,11 +7,12 @@ public class ChildrenAI : MonoBehaviour
     [Header("Stats")]
     public float speed = 1f; 
     private Vector3 direction; 
-    private Vector3 castStartPosition; 
 
     [Header("Collision")]
     public LayerMask collisionLayer;
     public float checkRadius = 0.5f;
+    private Vector3 castStartPosition;
+    private int originalLayer;
 
     void Start()
     {
@@ -21,8 +22,13 @@ public class ChildrenAI : MonoBehaviour
     void Update()
     {
         transform.Translate(direction * speed * Time.deltaTime);
-        RaycastHit2D hit = Physics2D.CircleCast(transform.position, checkRadius, direction, 0.1f, collisionLayer);
-        castStartPosition = transform.position;
+        castStartPosition = transform.position; // Save the start position for Gizmos
+
+        gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
+
+        RaycastHit2D hit = Physics2D.CircleCast(castStartPosition, checkRadius, direction, 0.1f, collisionLayer);
+
+        gameObject.layer = originalLayer;
 
         if (hit.collider != null)
         {
@@ -38,9 +44,12 @@ public class ChildrenAI : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(castStartPosition, checkRadius);
-        Gizmos.DrawLine(castStartPosition, castStartPosition + direction * 0.1f);
-        Gizmos.DrawWireSphere(castStartPosition + direction * 0.1f, checkRadius);
+        if (Application.isPlaying)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(castStartPosition, checkRadius);
+            Gizmos.DrawLine(castStartPosition, castStartPosition + direction * 0.1f);
+            Gizmos.DrawWireSphere(castStartPosition + direction * 0.1f, checkRadius);
+        }
     }
 }
