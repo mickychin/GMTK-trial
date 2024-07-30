@@ -29,6 +29,7 @@ public class Gamemaster : MonoBehaviour
         Time = timeseted;
         StartCoroutine(UpdateTime());
         NextWaveButton.gameObject.SetActive(false);
+        DayMap.SetActive(false);
     }
 
     IEnumerator UpdateTime()
@@ -36,7 +37,6 @@ public class Gamemaster : MonoBehaviour
         yield return new WaitForSeconds(1f);
         if(Time > 0)
         {
-            DayMap.SetActive(false);
             Time -= 1;
             TimeText.text = "Time : " + Time.ToString();
             StartCoroutine(UpdateTime());        }
