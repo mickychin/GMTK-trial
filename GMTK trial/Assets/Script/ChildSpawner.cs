@@ -19,8 +19,9 @@ public class ChildSpawner : MonoBehaviour
 
     IEnumerator SpawnChild()
     {
-        Debug.Log("HELLO");
-        yield return new WaitForSeconds(5f);
+        //Debug.Log("HELLO");
+        Instantiate(child, transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(3f);
         StartCoroutine(SpawnChild());
     }
 }
