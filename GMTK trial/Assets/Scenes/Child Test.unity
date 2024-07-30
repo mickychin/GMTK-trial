@@ -657,6 +657,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mouse
       objectReference: {fileID: 0}
+    - target: {fileID: 6142802123518695386, guid: 1d47601544e8d904c931f633084163f5, type: 3}
+      propertyPath: offset.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6142802123518695386, guid: 1d47601544e8d904c931f633084163f5, type: 3}
+      propertyPath: offset.y
+      value: -0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 6570107791190406050, guid: 1d47601544e8d904c931f633084163f5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.4875057
