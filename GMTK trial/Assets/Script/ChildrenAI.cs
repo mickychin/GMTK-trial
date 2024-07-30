@@ -26,12 +26,14 @@ public class ChildrenAI : MonoBehaviour
 
     [Header("Animation")]
     public Animator animator;
+    AudioSource audioSource;
 
     void Start()
     {
         direction = GetRandomDirection();
         originalLayer = gameObject.layer;
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -81,6 +83,7 @@ public class ChildrenAI : MonoBehaviour
 
     void OnMouseDown()
     {
+        audioSource.Play();
         isDragging = true;
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0;
