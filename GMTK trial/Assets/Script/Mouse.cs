@@ -16,7 +16,7 @@ public class Mouse : MonoBehaviour
     {
         // Get the mouse position in world coordinates
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePos.z = 0;   
+        mousePos.z = 0;
  // Force it to be in the same plane as the object
 
         // Set the object's position to the mouse position
