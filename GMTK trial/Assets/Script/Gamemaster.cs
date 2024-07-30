@@ -35,5 +35,14 @@ public class Gamemaster : MonoBehaviour
             TimeText.text = "Time : " + Time.ToString();
             StartCoroutine(UpdateTime());
         }
+        else
+        {
+            ChildrenAI[] childrens = FindObjectsOfType<ChildrenAI>();
+            foreach (ChildrenAI children in childrens)
+            {
+                children.IsMoving = false;
+                children.GetComponent<Animator>().enabled = false;
+            }
+        }
     }
 }

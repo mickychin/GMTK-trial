@@ -32,6 +32,11 @@ public class ChildrenAI : MonoBehaviour
 
     void Update()
     {
+        if (!IsMoving)
+        {
+            return;
+        }
+
         if (isDragging)
         {
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);

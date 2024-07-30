@@ -669,6 +669,14 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3636843035386110319, guid: fee87fedec868fa48944c8cad0c19e21, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636843035386110319, guid: fee87fedec868fa48944c8cad0c19e21, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636843035386110319, guid: fee87fedec868fa48944c8cad0c19e21, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -711,7 +719,7 @@ PrefabInstance:
     - target: {fileID: 4332694893442069954, guid: fee87fedec868fa48944c8cad0c19e21, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+      objectReference: {fileID: 21300000, guid: c64f70f4617cfd94aa1d70b8b706c4d8, type: 3}
     - target: {fileID: 4497794945945411578, guid: fee87fedec868fa48944c8cad0c19e21, type: 3}
       propertyPath: m_Name
       value: Spawner

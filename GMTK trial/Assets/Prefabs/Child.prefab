@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  IsMoving: 1
   collisionLayer:
     serializedVersion: 2
     m_Bits: 8
