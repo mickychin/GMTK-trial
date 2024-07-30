@@ -43,10 +43,10 @@ public class Gamemaster : MonoBehaviour
             foreach (ChildrenAI children in childrens)
             {
                 children.IsMoving = false;
-                children.GetComponent<Animator>().enabled = false;
+                //children.GetComponent<Animator>().enabled = false;
             }
-            FindObjectOfType<Money>().Moneys += FindObjectOfType<ChildSpawner>().MoneyEarn[FindObjectOfType<ChildSpawner>().Wave];
-        
+            //FindObjectOfType<Money>().Moneys += FindObjectOfType<ChildSpawner>().MoneyEarn[FindObjectOfType<ChildSpawner>().Wave];
+            FindObjectOfType<Money>().Moneys += 1;
         }
     }
 }
