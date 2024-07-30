@@ -7,7 +7,9 @@ public class ChildSpawner : MonoBehaviour
     public GameObject child;
     public int[] NOfChildSpawn;
     public int[] Frequency;
+    public int[] Timer;
     public int Wave;
+    public bool DayTime;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +31,11 @@ public class ChildSpawner : MonoBehaviour
         if(NOfChildSpawn[Wave] >= 0)
         {
             StartCoroutine(SpawnChild());
+            NOfChildSpawn[Wave]--;
+        }
+        else
+        {
+            DayTime = true;
         }
     }
 }
