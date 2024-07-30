@@ -12,17 +12,29 @@ public class ChildSpawner : MonoBehaviour
     public int[] MoneyEarn;
     public int Wave;
     public bool StopSpawning;
+    Gamemaster gamemaster;
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(SpawnChild());
+        Wave = -1;
+        //StartCoroutine(SpawnChild());
+        gamemaster = FindObjectOfType<Gamemaster>();
+        StartNextWave();
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+    public void StartNextWave()
+    {
+        Wave++;
+        StartCoroutine(SpawnChild());
+        Debug.Log(Timer[Wave]);
+        gamemaster.TimeSet(Timer[Wave]);
     }
 
     IEnumerator SpawnChild()

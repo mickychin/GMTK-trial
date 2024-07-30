@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -45,10 +45,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63712c058f9e1cd45900811d03630605, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  child: {fileID: 769909505933494427, guid: 4af3d732ee9daef49a01667320629190, type: 3}
+  child: {fileID: 2143329884339985687, guid: d4adf9174febe844fbed2959096709d9, type: 3}
   NOfChildSpawn: 0400000000000000000000000000000000000000
   Frequency: 0100000000000000000000000000000000000000
+  Timer: 0a00000000000000000000000000000000000000
+  MoneyEarn: 
   Wave: 0
+  StopSpawning: 0
 --- !u!212 &4332694893442069954
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -90,7 +93,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c64f70f4617cfd94aa1d70b8b706c4d8, type: 3}
   m_Color: {r: 0.7798742, g: 0.39871696, b: 0.14959837, a: 1}
   m_FlipX: 0
   m_FlipY: 0

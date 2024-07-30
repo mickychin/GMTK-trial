@@ -11,7 +11,7 @@ public class Gamemaster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(UpdateTime());
+        //StartCoroutine(UpdateTime());
     }
 
     // Update is called once per frame
@@ -22,6 +22,7 @@ public class Gamemaster : MonoBehaviour
 
     public void TimeSet(int timeseted)
     {
+        Debug.Log("ELLO");
         Time = timeseted;
         StartCoroutine(UpdateTime());
     }

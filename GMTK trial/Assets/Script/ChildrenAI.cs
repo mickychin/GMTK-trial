@@ -56,6 +56,7 @@ public class ChildrenAI : MonoBehaviour
         }
         else
         {
+            animator.SetBool("IsPickedUpByThePlayer", false);
             transform.Translate(direction * speed * Time.deltaTime);
             castStartPosition = transform.position;
 
@@ -83,8 +84,8 @@ public class ChildrenAI : MonoBehaviour
         isDragging = true;
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0;
-        offset = transform.position - mousePosition;   
-        animator.IsPickedUpByThePlayer = false;
+        offset = transform.position - mousePosition;
+        animator.SetBool("IsPickedUpByThePlayer", true);
         previousMousePosition = Input.mousePosition;
     }
 
