@@ -8,6 +8,7 @@ public class Gamemaster : MonoBehaviour
 {
     public int Time;
     public TextMeshProUGUI TimeText;
+    public Button NextWaveButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class Gamemaster : MonoBehaviour
         Debug.Log("ELLO");
         Time = timeseted;
         StartCoroutine(UpdateTime());
+        NextWaveButton.gameObject.SetActive(false);
     }
 
     IEnumerator UpdateTime()
@@ -39,6 +41,7 @@ public class Gamemaster : MonoBehaviour
         else
         {
             //day time
+            NextWaveButton.gameObject.SetActive(true);
             ChildrenAI[] childrens = FindObjectsOfType<ChildrenAI>();
             foreach (ChildrenAI children in childrens)
             {
