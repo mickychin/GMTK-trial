@@ -154,6 +154,8 @@ public class ChildrenAI : MonoBehaviour
 
     void InstantiateDeathObject()
     {
+        FindObjectOfType<HealthBar>().TakeDamage();
+
         if (deathObjectPrefab != null)
         {
             GameObject deathObject = Instantiate(deathObjectPrefab, transform.position, Quaternion.identity);

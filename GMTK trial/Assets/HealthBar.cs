@@ -20,7 +20,7 @@ public class HealthBar : MonoBehaviour
 
     }
 
-    void TakeDamage()
+    public void TakeDamage()
     {
         Health = Health - 1;
         if(Health <= 0)
