@@ -83,6 +83,7 @@ public class ChildrenAI : MonoBehaviour
 
     void OnMouseDown()
     {
+        //audioSource.clip = PickUpClip;
         audioSource.Play();
         isDragging = true;
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
