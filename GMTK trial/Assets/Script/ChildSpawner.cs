@@ -12,6 +12,7 @@ public class ChildSpawner : MonoBehaviour
     public int[] MoneyEarn;
     public int Wave;
     public bool StopSpawning;
+    AudioSource audioSource;
     Gamemaster gamemaster;
 
     // Start is called before the first frame update
@@ -20,6 +21,7 @@ public class ChildSpawner : MonoBehaviour
         Wave = -1;
         //StartCoroutine(SpawnChild());
         gamemaster = FindObjectOfType<Gamemaster>();
+        audioSource = GetComponent<AudioSource>();
         StartNextWave();
     }
 
@@ -31,6 +33,7 @@ public class ChildSpawner : MonoBehaviour
 
     public void StartNextWave()
     {
+        audioSource.Play();
         Wave++;
         StartCoroutine(SpawnChild());
         Debug.Log(Timer[Wave]);
