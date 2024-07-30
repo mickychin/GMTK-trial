@@ -1,26 +1,26 @@
 using UnityEngine;
 
-public class Mouse : MonoBehaviour
+public class CustomMousePointer : MonoBehaviour
 {
-    public Sprite defaultSprite;
-    public Sprite clickedSprite;
+    public Sprite defaultSprite; // Sprite for the default state
+    public Sprite clickedSprite; // Sprite for the clicked state
     private SpriteRenderer spriteRenderer;
+    public Vector3 offset; // Offset for the mouse pointer position
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        Cursor.visible = false;
+        Cursor.visible = false; // Hide the default system cursor
     }
 
     void Update()
     {
         // Get the mouse position in world coordinates
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePos.z = 0;
- // Force it to be in the same plane as the object
+        mousePos.z = 0; // Force it to be in the same plane as the object
 
-        // Set the object's position to the mouse position
-        transform.position = mousePos;
+        // Apply the offset and set the object's position to the adjusted mouse position
+        transform.position = mousePos + offset;
 
         // Change sprite based on mouse button state
         if (Input.GetMouseButton(0))
