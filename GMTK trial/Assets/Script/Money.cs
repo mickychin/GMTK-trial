@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class Money : MonoBehaviour
 {
 
     [Header("Money")]
     public int Moneys;
-
+    public TextMeshProUGUI MoneysText;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +19,7 @@ public class Money : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        MoneysText.text = " : " + Moneys.ToString();
+
     }
 }
