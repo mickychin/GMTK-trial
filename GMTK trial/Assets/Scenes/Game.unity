@@ -362,6 +362,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: 4497794945945411578, guid: fee87fedec868fa48944c8cad0c19e21, type: 3}
+      propertyPath: m_TagString
+      value: Tent
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4332694893442069954}
   m_Layer: 0
   m_Name: Spawner
-  m_TagString: Untagged
+  m_TagString: Tent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,7 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 769909505933494427, guid: 4af3d732ee9daef49a01667320629190, type: 3}
-  NOfChildSpawn: 0000000000000000000000000000000000000000
+  NOfChildSpawn: 0400000000000000000000000000000000000000
+  Frequency: 0100000000000000000000000000000000000000
   Wave: 0
 --- !u!212 &4332694893442069954
 SpriteRenderer:
