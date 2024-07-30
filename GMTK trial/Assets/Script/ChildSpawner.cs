@@ -10,6 +10,7 @@ public class ChildSpawner : MonoBehaviour
     public int[] Frequency;
     public int[] Timer;
     public int[] MoneyEarn;
+    public int[] ChildSpeed;
     public int Wave;
     public bool StopSpawning;
     AudioSource audioSource;
@@ -43,7 +44,8 @@ public class ChildSpawner : MonoBehaviour
     IEnumerator SpawnChild()
     {
         Debug.Log("HELLO");
-        Instantiate(child, transform.position, Quaternion.identity);
+        GameObject newchild = Instantiate(child, transform.position, Quaternion.identity);
+        newchild.GetComponent<ChildrenAI>().speed = ChildSpeed[Wave];
         yield return new WaitForSeconds(Frequency[Wave]);
         if(NOfChildSpawn[Wave] >= 0)
         {

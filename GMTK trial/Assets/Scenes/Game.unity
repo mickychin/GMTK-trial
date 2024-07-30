@@ -1442,11 +1442,19 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2990836840385526983, guid: fee87fedec868fa48944c8cad0c19e21, type: 3}
+      propertyPath: Timer.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990836840385526983, guid: fee87fedec868fa48944c8cad0c19e21, type: 3}
       propertyPath: Timer.Array.data[1]
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2990836840385526983, guid: fee87fedec868fa48944c8cad0c19e21, type: 3}
       propertyPath: MoneyEarn.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990836840385526983, guid: fee87fedec868fa48944c8cad0c19e21, type: 3}
+      propertyPath: ChildSpeed.Array.size
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2990836840385526983, guid: fee87fedec868fa48944c8cad0c19e21, type: 3}
@@ -1464,6 +1472,10 @@ PrefabInstance:
     - target: {fileID: 2990836840385526983, guid: fee87fedec868fa48944c8cad0c19e21, type: 3}
       propertyPath: MoneyEarn.Array.data[2]
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990836840385526983, guid: fee87fedec868fa48944c8cad0c19e21, type: 3}
+      propertyPath: ChildSpeed.Array.data[0]
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2990836840385526983, guid: fee87fedec868fa48944c8cad0c19e21, type: 3}
       propertyPath: NOfChildSpawn.Array.data[1]
