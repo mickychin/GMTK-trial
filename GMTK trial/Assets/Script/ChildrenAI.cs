@@ -135,7 +135,8 @@ public class ChildrenAI : MonoBehaviour
     {
         if (deathObjectPrefab != null)
         {
-            Instantiate(deathObjectPrefab, transform.position, Quaternion.identity);
+            GameObject deathObject = Instantiate(deathObjectPrefab, transform.position, Quaternion.identity);
+            deathObject.transform.rotation = Quaternion.Euler(0, 0, transform.eulerAngles.z + 180);
         }
     }
 }
