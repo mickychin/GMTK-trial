@@ -44,6 +44,8 @@ public class Gamemaster : MonoBehaviour
                 children.IsMoving = false;
                 children.GetComponent<Animator>().enabled = false;
             }
+            FindObjectOfType<Money>().Moneys += FindObjectOfType<ChildSpawner>().MoneyEarn[FindObjectOfType<ChildSpawner>().Wave];
+        
         }
     }
 }

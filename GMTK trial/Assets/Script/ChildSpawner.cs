@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class ChildSpawner : MonoBehaviour
 {
+    [Header("Spawner")]
     public GameObject child;
     public int[] NOfChildSpawn;
     public int[] Frequency;
     public int[] Timer;
+    public int[] MoneyEarn;
     public int Wave;
     public bool StopSpawning;
 
