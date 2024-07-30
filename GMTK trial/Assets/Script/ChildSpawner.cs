@@ -10,7 +10,7 @@ public class ChildSpawner : MonoBehaviour
     public int[] Frequency;
     public int[] Timer;
     public int[] MoneyEarn;
-    public int[] ChildSpeed;
+    public float[] ChildSpeed;
     public int Wave;
     public bool StopSpawning;
     AudioSource audioSource;
