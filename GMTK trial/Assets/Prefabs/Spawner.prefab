@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 769909505933494427, guid: 4af3d732ee9daef49a01667320629190, type: 3}
+  NOfChildSpawn: 0000000000000000000000000000000000000000
+  Wave: 0
 --- !u!212 &4332694893442069954
 SpriteRenderer:
   m_ObjectHideFlags: 0
