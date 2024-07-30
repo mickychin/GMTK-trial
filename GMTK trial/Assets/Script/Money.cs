@@ -6,7 +6,7 @@ public class Money : MonoBehaviour
 {
 
     [Header("Money")]
-    public int Money;
+    public int Moneys;
 
     // Start is called before the first frame update
     void Start()
