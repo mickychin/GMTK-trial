@@ -9,7 +9,7 @@ public class ChildSpawner : MonoBehaviour
     public int[] Frequency;
     public int[] Timer;
     public int Wave;
-    public bool DayTime;
+    public bool StopSpawning;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +35,7 @@ public class ChildSpawner : MonoBehaviour
         }
         else
         {
-            DayTime = true;
+            StopSpawning = true;
         }
     }
 }
