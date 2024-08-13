@@ -8,20 +8,11 @@ using UnityEngine.SceneManagement;
 public class HealthBar : MonoBehaviour
 {
     public int Health = 5;
-    public TextMeshProUGUI HealthText;
-
-    void Start()
-    {
-    }
-
-    void Update()
-    {
-        HealthText.text = " : " + Health.ToString();
-
-    }
+    public Image[] HealthImage;
 
     public void TakeDamage()
     {
+        HealthImage[Health-1].gameObject.SetActive(false);
         Health = Health - 1;
         if(Health <= 0)
         {

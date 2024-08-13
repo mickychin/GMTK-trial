@@ -46,6 +46,16 @@ public class ChildrenAI : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+
+            if(isDragging)
+            {
+                animator.SetBool("IsPickedUpByThePlayer", true);
+            }
+            else
+            {
+                animator.SetBool("IsPickedUpByThePlayer", false);
+            }
+
             return;
         }
 
