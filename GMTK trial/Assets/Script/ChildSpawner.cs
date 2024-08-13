@@ -43,17 +43,22 @@ public class ChildSpawner : MonoBehaviour
 
     IEnumerator SpawnChild()
     {
-        Debug.Log("HELLO");
-        GameObject newchild = Instantiate(child, transform.position, Quaternion.identity);
-        newchild.GetComponent<ChildrenAI>().speed = ChildSpeed[Wave];
-        yield return new WaitForSeconds(Frequency[Wave]);
-        if(NOfChildSpawn[Wave] >= 0)
+        //Debug.Log("HELLO");
+        if (NOfChildSpawn[Wave] > 0)
         {
-            StartCoroutine(SpawnChild());
+            GameObject newchild = Instantiate(child, transform.position, Quaternion.identity);
+            newchild.GetComponent<ChildrenAI>().speed = ChildSpeed[Wave];
+        }
+        yield return new WaitForSeconds(Frequency[Wave]);
+        if (NOfChildSpawn[Wave] > 0)
+        {
+            //Debug.Log(NOfChildSpawn[Wave]);
             NOfChildSpawn[Wave]--;
+            StartCoroutine(SpawnChild());
         }
         else
         {
+            //Debug.Log("HELLO");
             StopSpawning = true;
         }
     }
