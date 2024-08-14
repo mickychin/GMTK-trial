@@ -99,3 +99,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultSprite: {fileID: 21300000, guid: baa4998389c694b4dbd2519648e2bab8, type: 3}
   clickedSprite: {fileID: 21300000, guid: c4309d6b62d09b947b1c42457d54ba98, type: 3}
+  offset_default: {x: 0.275, y: -0.28, z: 0}
+  offset_drag: {x: 0.17, y: 0.2, z: 0}

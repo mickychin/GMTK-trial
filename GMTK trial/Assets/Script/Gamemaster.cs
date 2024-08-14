@@ -17,15 +17,9 @@ public class Gamemaster : MonoBehaviour
         //StartCoroutine(UpdateTime());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void TimeSet(int timeseted)
     {
-        Debug.Log("ELLO");
+        //Debug.Log("ELLO");
         Time = timeseted;
         StartCoroutine(UpdateTime());
         NextWaveButton.gameObject.SetActive(false);
@@ -35,11 +29,12 @@ public class Gamemaster : MonoBehaviour
     IEnumerator UpdateTime()
     {
         yield return new WaitForSeconds(1f);
-        if(Time > 0)
+        if (Time > 0)
         {
             Time -= 1;
-            TimeText.text = "Time : " + Time.ToString();
-            StartCoroutine(UpdateTime());        }
+            TimeText.text = Time.ToString() + "s";
+            StartCoroutine(UpdateTime());        
+        }
         else
         {
             //day time
